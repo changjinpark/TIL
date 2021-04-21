@@ -78,3 +78,30 @@ $("#Notice").val("점검 중");
 </body>
 </html>
 ```
+
+### 3. 응용 버전 
+
+예) input 태그 value에 HTML Entity를 decoding 해야할 경우 방법(오늘 해결한 문제)
+``` javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $( document ).ready( function() {
+
+        var Tag = "HTML Entity: &lt; &gt; &amp;";
+
+        $('#Notice1').val($("#Notice1").html(Tag).text());
+
+    });
+    </script>
+
+</head>
+<body>
+    <input type="text" id="Notice1" value = "">
+</body>
+</html>
+```
