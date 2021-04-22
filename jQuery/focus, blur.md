@@ -19,6 +19,12 @@ $("#changepwd").on("click", function(){
 ```
 
 2. 포커스 해제할 때 이벤트 발생
-사용 예) 포커스가 없을 때 입력란에 글씨가 보이도록 할 경우 사용
+사용 예) 포커스를 해제할 때 팝업(경고창)을 보여주고 싶을 때 사용
 
-
+``` javascript
+$(document).ready(function(){
+  $("input").blur(function(){
+    alert("This input field has lost its focus.");
+  });
+});
+```
